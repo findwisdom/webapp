@@ -1,0 +1,8 @@
+/* 基本图文组件样式 */
+.h5_contentbase{
+    position: absolute;
+    background-size:100%;
+    background-repeat:no-repeat ;
+    opacity: 0;
+}
+

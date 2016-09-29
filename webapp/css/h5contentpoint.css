@@ -1,0 +1,62 @@
+/* 基本图文组件样式 */
+.h5_contentbasename_point .point{
+    position: absolute;
+    background-size:100%;
+    background-repeat:no-repeat ;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 10;
+}
+.point_copy{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    z-index:0;
+    background-color:#535353;
+}
+.point_name{
+    z-index: 11;
+    height: 3rem;
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    width: 100%;
+    margin-top: -1.5rem;
+}
+.point_per{
+    z-index: 11;
+    font-size: 1rem;
+    text-align: center;
+}
+.point_copy{
+    -webkit-animation: bglow 2s ease 1s infinite;
+    animation:bglow 2s ease  6s infinite ;
+}
+@-webkit-keyframes bglow {
+    0% {
+       width: 100%;
+       opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        width: 130%;
+        opacity: 0.5;
+    }
+}
+@keyframes bglow {
+    0% {
+        transform:scale(1);
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        transform:scale(1.3);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <title>webapp组件</title>
+        <!-- 载入所有的组件资源 -->
+        <script type="text/javascript" src="js/lib/jquery.js"></script>
+        <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="js/h5contentbase.js"></script>
+        <script type="text/javascript" src="js/h5contentpolyline.js"></script>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/h5contentbase.css">
+        <link rel="stylesheet" href="css/h5contentpolyline.css">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background: #fff;
+                font-size: 1.2rem;
+            }
+            .iphone{
+                height: 54rem;
+                width: 34rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -27rem 0 0 -17rem;
+                background: #fff;
+
+            }
+            /*.root{
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+            }*/
+        </style>
+    <body>
+    <div class="iphone"></div>
+    <div class="root"></div>
+    <script>
+        $(function(){
+            var cfg ={
+                type:'polyline',
+                width:parseInt($(window).width()*0.93*2),
+                height:parseInt($(window).height()*0.5*2*0.7),
+                data:[
+                    ['html',0.2],
+                    ['css',0.4],
+                    ['js',0.6],
+                    ['jquery',0.7],
+                    ['node',0.8],
+                    ['react',0.3]
+                ],
+                css:{
+                },
+                animateIn:{
+                    marginTop:-75,
+                    opacity:1,
+                    top:'50%'
+                },
+                animateOut:{
+                    opacity:0,
+                    top:0
+                },
+                center:true
+            };
+            var h5 =new h5contentpolyline('polyline',cfg);
+            $('body').append(h5);
+            var leave =true;
+            $('body').click(function(){
+                $('.h5_contentbase').trigger(leave ?'onleave':'onload');
+                leave=!leave;
+            });
+        })
+    </script>
+    </body>
+</html>

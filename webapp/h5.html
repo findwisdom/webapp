@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <title>webapp组件</title>
+        <!-- 载入所有的组件资源 -->
+        <script type="text/javascript" src="js/lib/jquery.js"></script>
+        <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="js/H5.js"></script>
+        <script type="text/javascript" src="js/h5contentbase.js"></script>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/H5.css">
+        <link rel="stylesheet" href="css/h5contentbase.css">
+        <style>
+        </style>
+    <body>
+    <script>
+        $(function(){
+            var ppt =new h5();
+            ppt
+               .addpage('des','mast')
+                    .addcontent('name_one',{
+                        text:'center',
+                        width:200,
+                        height:500,
+                        css:{
+                            background:'#ffffff',
+                            top:50
+                        },
+                        center:true
+                    })
+                    .addcontent('name_two',{
+                        text:'qqqqqcenter',
+                        width:200,
+                        height:500,
+                        css:{
+                            background:'#000',
+                            top:50
+                        }
+                    })
+               .addpage('msq','last')
+                    .addcontent('name_one',{
+                        text:'center',
+                        width:200,
+                        height:500,
+                        css:{
+                            background:'#000',
+                            top:50
+                        }
+                    })
+                    .addcontent('name_two',{
+                        text:'qqqqqcenter',
+                        width:200,
+                        height:500,
+                        css:{
+                            background:'#000',
+                            top:50
+                        }
+                    })
+                    .addpage('msq','last')
+                    .addcontent('name_one',{
+                        text:'center',
+                        width:200,
+                        height:500,
+                        css:{
+                            background:'#000',
+                            top:50
+                        }
+                    })
+                    .addcontent('name_two',{
+                        text:'qqqqqcenter',
+                        width:200,
+                        height:500,
+                        css:{
+                            background:'#000',
+                            top:50
+                        }
+                    }).loader();
+        });
+    </script>
+    </body>
+</html>

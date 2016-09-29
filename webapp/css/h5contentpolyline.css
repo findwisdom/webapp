@@ -1,0 +1,33 @@
+/* 基本图文组件样式 */
+.h5_contentbasename_polyline{}
+.h5_contentbasename_polyline canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.h5_contentbasename_polyline canvas:nth-child(2){
+    z-index: 1000;
+}
+.h5_contentbasename_polyline .text{
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+    -webkit-opacity:0;
+}
+.h5_static_polyline_load .text{
+    transition:all 1s 1.5s;
+    -webkit-transition:all 1s 1.5s;
+    opacity: 1;
+    -webkit-opacity:1;
+}
+.h5_static_polyline_leave .text{
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+    opacity: 0;
+    -webkit-opacity:0;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>webapp组件</title>
+
+    <!-- 载入所有的组件资源 -->
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+    <script>
+        $(function(){
+            $("#h5").fullpage({
+                'sectionsColor':['#535353','#212121','#333333'],
+                onLeave: function (index,nextIndex,direction) {
+                    $('#h5').find('.page').eq(index-1).trigger('onleave');
+                },
+                afterLoad:function(anchorLink,index){
+                    $('#h5').find('.page').eq(index-1).trigger('onload');
+                }
+            });
+
+            $('.page').on('onleave',function(){
+                console.log($(this).attr('id')+'==>'+'onleave');
+                $(this).find('.content').trigger('onleave');
+            });
+            $('.page').on('onload',function(){
+                console.log($(this).attr('id')+'==>'+'onload');
+                $(this).find('.content').trigger('onload');
+            });
+            $('.content').on('onleave',function(){
+                $('.content').fadeOut();
+                return false;
+            });
+            $('.content').on('onload',function(){
+                $('.content').fadeIn();
+                return false;
+            });
+        })
+    </script>
+    <style>
+        .content{
+            font-size: 50px;
+            color: red;
+            display: none;
+        }
+    </style>
+<body>
+<div id="h5">
+    <div class="page section" id="page-1">
+        <div class="content">logo</div>
+        <div class="content">logo</div>
+    </div>
+    <div class="page section" id="page-2">
+        <div class="content">logo</div>
+        <div class="content">logo</div>
+    </div>
+    <div class="page section" id="page-3">
+        <div class="content">logo</div>
+        <div class="content">logo</div>
+    </div>
+</div>
+</body>
+</html>
