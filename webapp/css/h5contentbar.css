@@ -24,20 +24,20 @@
     float: left;
     margin-left: 2rem;
 }
-.h5_staticload .bar_rate .bar_bg{
+.h5_static_bar_load .bar_rate .bar_bg{
     -webkit-transition: all 1s 0.5s;
     transition: all 1s 0.5s;
     width: 100%;
 }
-.h5_staticload .bar_per{
+.h5_static_bar_load .bar_per{
     -webkit-transition: all 1s 1s;
     transition: all 1s 1s;
     -webkit-opacity: 1;
     opacity: 1;
 }
-.h5_staticleave .bar_per{
+.h5_static_bar_leave .bar_per{
     opacity: 0;
 }
-.h5_staticleave .bar_rate .bar_bg{
+.h5_static_bar_leave .bar_rate .bar_bg{
     width: 0;
 }

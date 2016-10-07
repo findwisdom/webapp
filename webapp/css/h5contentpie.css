@@ -1,0 +1,23 @@
+/* 基本图文组件样式 */
+.h5_contentbasename_pie{}
+.h5_contentbasename_pie canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.h5_contentbasename_pie canvas:nth-child(2){
+    z-index: 1000;
+}
+.h5_contentbasename_pie .text{
+    position: absolute;
+    transition:all 1s 1.5s;
+    -webkit-transition:all 1s;
+}
+.h5_contentbasename_pie .per{
+    position: absolute;
+    transition:all 1s 1.5s;
+    -webkit-transition:all 1s;
+}
+

@@ -12,17 +12,16 @@
         <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
         <script type="text/javascript" src="js/h5contentbase.js"></script>
-        <script type="text/javascript" src="js/h5contentradar.js"></script>
+        <script type="text/javascript" src="js/h5contentpie.js"></script>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/h5contentbase.css">
-        <link rel="stylesheet" href="css/h5contentradar.css">
+        <link rel="stylesheet" href="css/h5contentpie.css">
         <style>
             *{
                 padding: 0;
                 margin: 0;
             }
             body{
-
                 width: 100%;
                 height: 800px;
                 margin: 0;
@@ -50,15 +49,15 @@
     <script>
         $(function(){
             var cfg ={
-                type:'radar',
+                type:'pie',
                 width:500,
                 height:500,
                 data:[
-                    ['html',0.8,'red'],
-                    ['css',0.7],
-                    ['js',0.5],
-                    ['jquery',0.9],
-                    ['node',0.4]
+                    ['html',0.3,'red'],
+                    ['css',0.3,'blue'],
+                    ['js',0.2,'green'],
+                    ['jquery',0.1,'yellow'],
+                    ['node',0.1,'#000']
                 ],
                 css:{
                 },
@@ -73,7 +72,7 @@
                 },
                 center:true
             };
-            var h5 =new h5contentradar('radar',cfg);
+            var h5 =new h5contentpie('pie',cfg);
             $('body').append(h5);
             var leave =true;
             $('body').click(function(){

@@ -1,0 +1,49 @@
+/* 基本图文组件样式 */
+.h5_contentbasename_bar_v{
+}
+.h5_contentbasename_bar_v .line_bar_v{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    float: left;
+}
+.line_bar_v .bar_v_rate{
+    position: absolute;
+    bottom:5% ;
+    left: 45%;
+    height: 100%;
+}
+.line_bar_v .bar_v_rate .bar_v_bg{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+}
+.line_bar_v .bar_v_name{
+    position:absolute;
+    width: 100%;
+    line-height: 100%;
+    text-align: center;
+    bottom: 0;
+}
+.line_bar_v .bar_v_per{
+    text-align: center;
+    margin-top: -15px;
+}
+.h5_static_bar_v_load .bar_v_rate .bar_v_bg{
+    -webkit-transition: all 1s 0.5s;
+    transition: all 1s 0.5s;
+    height: 100%;
+}
+.h5_static_bar_v_load .bar_v_per{
+    -webkit-transition: all 1s 1s;
+    transition: all 1s 1s;
+    -webkit-opacity: 1;
+    opacity: 1;
+}
+.h5_static_bar_v_leave .bar_v_per{
+    opacity: 0;
+}
+.h5_static_bar_v_leave .bar_v_rate .bar_v_bg{
+    height: 0%;
+}

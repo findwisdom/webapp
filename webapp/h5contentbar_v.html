@@ -12,25 +12,18 @@
         <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
         <script type="text/javascript" src="js/h5contentbase.js"></script>
-        <script type="text/javascript" src="js/h5contentradar.js"></script>
+        <script type="text/javascript" src="js/h5contentbar_v.js"></script>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/h5contentbase.css">
-        <link rel="stylesheet" href="css/h5contentradar.css">
+        <link rel="stylesheet" href="css/h5contentbar_v.css">
         <style>
-            *{
-                padding: 0;
-                margin: 0;
-            }
             body{
-
-                width: 100%;
-                height: 800px;
                 margin: 0;
                 padding: 0;
-                background: #fff;
+                background: #000;
                 font-size: 1.2rem;
             }
-            /*.iphone{
+            .iphone{
                 height: 54rem;
                 width: 34rem;
                 position: absolute;
@@ -38,32 +31,28 @@
                 left: 50%;
                 margin: -27rem 0 0 -17rem;
                 background: #fff;
+
             }
-            .root{
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-            }
-            */
         </style>
     <body>
+    <div class="iphone"></div>
     <script>
         $(function(){
             var cfg ={
-                type:'radar',
-                width:500,
+                type:'bar_v',
+                width:600,
                 height:500,
-                data:[
-                    ['html',0.8,'red'],
-                    ['css',0.7],
-                    ['js',0.5],
-                    ['jquery',0.9],
-                    ['node',0.4]
-                ],
                 css:{
+                    bottom:0
                 },
+                data:[
+                    ['HTML',1,'red'],
+                    ['CSS',0.3,'green'],
+                    ['Javascript',0.4,'blue'],
+                    ['JQuery',0.3,'#535353'],
+                    ['node.js',0.3,'#634323']
+                ],
                 animateIn:{
-                    marginTop:-75,
                     opacity:1,
                     top:'50%'
                 },
@@ -73,14 +62,15 @@
                 },
                 center:true
             };
-            var h5 =new h5contentradar('radar',cfg);
-            $('body').append(h5);
-            var leave =true;
+            var h5 =new h5contentbar_v('bar_v',cfg);
+            $('.iphone').append(h5);
+            var load =true;
             $('body').click(function(){
-                $('.h5_contentbase').trigger(leave ?'onleave':'onload');
-                leave=!leave;
+                $('.h5_contentbase').trigger(load ?'onload':'onleave')
+                load=!load;
             });
         })
+
     </script>
     </body>
 </html>
