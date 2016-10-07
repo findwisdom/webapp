@@ -12,18 +12,18 @@
         <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
         <script type="text/javascript" src="js/H5.js"></script>
-        <script type="text/javascript" src="js/h5contentbase.js"></script>
-        <script type="text/javascript">
-            var res=['base','bar','bar_v','radar','ring','pie','polyline','point']
-            var html=[];
-            for(var s in res){
-                html.push('<script type="text/javascript" src="js/h5content.js"></script>')
-            }
-        </script>
-        <style>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/H5.css">
-        <link rel="stylesheet" href="css/h5contentbase.css">
+        <script>
+            var res=['base','bar','bar_v','point','polyline','radar','ring','pie'];
+            var html=[];
+            for(var s in res){
+                html.push('<script type="text/javascript" src="js/h5content'+res[s]+'.js"><\/script>');
+                html.push('<link rel="stylesheet" href="css/h5content'+res[s]+'.css">');
+            }
+            document.write(html.join(''));
+        </script>
+        <style>
         </style>
     <body>
     <script>
@@ -73,15 +73,6 @@
                     .addpage('msq','last')
                     .addcontent('name_one',{
                         text:'center',
-                        width:200,
-                        height:500,
-                        css:{
-                            background:'#000',
-                            top:50
-                        }
-                    })
-                    .addcontent('name_two',{
-                        text:'qqqqqcenter',
                         width:200,
                         height:500,
                         css:{
