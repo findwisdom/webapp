@@ -14,6 +14,7 @@
         <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
         <script type="text/javascript" src="js/H5.js"></script>
         <script type="text/javascript" src="js/H5_loading.js"></script>
+        <script type="text/javascript">var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");var browser = navigator.userAgent.toLowerCase();var isMobile = false;for (var i=0; i<mobileAgent.length; i++){ if (browser.indexOf(mobileAgent[i])!=-1){ isMobile = true;location.href ='https://findwisdom.github.io/webapp/webapp/index_m.html';break; } }</script>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/H5.css">
         <link rel="stylesheet" href="css/H5_loading.css">
@@ -28,6 +29,7 @@
         </script>
         <style>
             iframe{
+                background: #515151;
                 position: absolute;
                 left: 50%;
                 top:50%;
@@ -37,12 +39,11 @@
             .text{
                 text-align: center;
                 font-size: 30px;
-                margin-top: 100px;
+                margin-top: 40px;
             }
         </style>
     <body>
-    <a href="index_m.html">点击这里</a>
-    <div class="text">请在可视窗口区域滑动滚轮，或按向下箭头</div>
+    <div class="text">请在可视窗口区域滑动滚轮,或点击向下按钮</div>
     <iframe src="index_m.html" frameBorder="0" width="360" scrolling="no" height="640"></iframe>
 
     <script>
