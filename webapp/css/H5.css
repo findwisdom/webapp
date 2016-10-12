@@ -6,8 +6,7 @@
 .h5_page{
     height: 100%;
     width:100%;
-    background-color: #632312;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size:cover;
     position: relative;
 }

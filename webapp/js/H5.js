@@ -26,6 +26,27 @@ function h5(){
             case 'base':
                 component =new h5contentbase(name,cfg);
                 break;
+            case 'bar':
+                component =new h5contentbar(name,cfg);
+                break;
+            case 'bar_v':
+                component =new h5contentbar_v(name,cfg);
+                break;
+            case 'pie':
+                component =new h5contentpie(name,cfg);
+                break;
+            case 'point':
+                component =new h5contentpoint(name,cfg);
+                break;
+            case 'polyline':
+                component =new h5contentpolyline(name,cfg);
+                break;
+            case 'radar':
+                component =new h5contentradar(name,cfg);
+                break;
+            case 'ring':
+                component =new h5contentring(name,cfg);
+                break;
             default:
         };
         var page=this.page.slice(-1)[0];
@@ -33,9 +54,21 @@ function h5(){
         return this;
     }
     //加载组件
-    this.loader=function(){
-        this.ele.fullpage();
+    this.loader=function(images,firstPage){
+        this.ele.fullpage({
+            onLeave:function( index, nextIndex, direction) {
+                $(this).find('.h5_contentbase').trigger('onleave');
+            },
+            afterLoad:function( anchorLink, index ) {
+                $(this).find('.h5_contentbase').trigger('onload');
+            }
+        });
+        this.page[0].find('.h5_contentbase').trigger('onload');
         this.ele.show();
+        if(firstPage){
+            $.fn.fullpage.moveTo( firstPage );
+        }
     }
+    this.loader = typeof H5_loading ==='function' ? H5_loading : this.loader;
     return this;
 }

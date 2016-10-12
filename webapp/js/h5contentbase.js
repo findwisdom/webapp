@@ -16,22 +16,22 @@ function h5contentbase(name,cfg){
             marginLeft:-cfg.width/4
         })
     }
+    //自定义其他选项
+    if( typeof cfg.onclick === 'function' ){
+        content.on('click',cfg.onclick);
+    }
     content.on('onload',function(){
         var h5_load='h5_static_'+name+'_load';
         var h5_leave='h5_static_'+name+'_leave';
-        var _h5_load='.'+h5_load;
-        $(_h5_load).stop();
         content.addClass(h5_load).removeClass(h5_leave);
-        cfg.animateIn && content.animate(cfg.animateIn);
+        cfg.cssIn && content.css(cfg.cssIn);
         return false;
     });
     content.on('onleave',function(){
         var h5_load='h5_static_'+name+'_load';
         var h5_leave='h5_static_'+name+'_leave';
-        var _h5_leave='.'+h5_leave;
-        $(_h5_leave).stop();
         content.addClass(h5_leave).removeClass(h5_load);
-        cfg.animateOut && content.animate(cfg.animateOut);
+        cfg.cssOut && content.css(cfg.cssOut);
         return false;
     })
     return content;

@@ -16,13 +16,13 @@ function h5contentring(name,cfg){
     var linewidth=40;
         cxt_1.beginPath();
         cxt_1.arc(r,r,r-linewidth,0,2*Math.PI);
-        cxt_1.fillStyle='#ffffff'
+        cxt_1.fillStyle='rgba(255,255,255,0.3)'
         cxt_1.fill();
 
         cxt_1.beginPath();
         cxt_1.lineWidth=linewidth;
         cxt_1.arc(r,r,r-linewidth,0,2*Math.PI);
-        cxt_1.strokeStyle='#e7e7e7';//cfg.data[0][2]||color.pop();
+        cxt_1.strokeStyle='rgba(231,231,231,0.5)';//cfg.data[0][2]||color.pop();
         cxt_1.stroke();
 
 

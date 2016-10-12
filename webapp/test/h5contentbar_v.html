@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <title>webapp组件</title>
+        <!-- 载入所有的组件资源 -->
+        <script type="text/javascript" src="../js/lib/jquery.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="../js/h5contentbase.js"></script>
+        <script type="text/javascript" src="../js/h5contentbar_v.js"></script>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/h5contentbase.css">
+        <link rel="stylesheet" href="../css/h5contentbar_v.css">
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: #000;
+                font-size: 1.2rem;
+            }
+            .iphone{
+                height: 54rem;
+                width: 34rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -27rem 0 0 -17rem;
+                background: #fff;
+
+            }
+        </style>
+    <body>
+    <div class="iphone"></div>
+    <script>
+        $(function(){
+            var cfg ={
+                type:'bar_v',
+                width:600,
+                height:500,
+                css:{
+                    bottom:0
+                },
+                data:[
+                    ['HTML',1,'red'],
+                    ['CSS',0.3,'green'],
+                    ['Javascript',0.4,'blue'],
+                    ['JQuery',0.3,'#535353'],
+                    ['node.js',0.3,'#634323']
+                ],
+                cssIn:{
+                    opacity:1,
+                    top:'50%'
+                },
+                cssOut:{
+                    opacity:0,
+                    top:0
+                },
+                center:true
+            };
+            var h5 =new h5contentbar_v('bar_v',cfg);
+            $('.iphone').append(h5);
+            var load =true;
+            $('body').click(function(){
+                $('.h5_contentbase').trigger(load ?'onload':'onleave')
+                load=!load;
+            });
+        })
+
+    </script>
+    </body>
+</html>

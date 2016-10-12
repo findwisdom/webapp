@@ -12,12 +12,14 @@
     bottom:5% ;
     left: 45%;
     height: 100%;
+    border-radius:16px ;
 }
 .line_bar_v .bar_v_rate .bar_v_bg{
     position: absolute;
     height: 0;
     width: 100%;
-    bottom: 0;
+    bottom: 10px;
+    border-radius:16px;
 }
 .line_bar_v .bar_v_name{
     position:absolute;
@@ -28,7 +30,7 @@
 }
 .line_bar_v .bar_v_per{
     text-align: center;
-    margin-top: -15px;
+    margin-top: -30px;
 }
 .h5_static_bar_v_load .bar_v_rate .bar_v_bg{
     -webkit-transition: all 1s 0.5s;

@@ -74,7 +74,8 @@ function h5contentpolyline(name,cfg){
             var item = cfg.data[i];
             var x = i * row_w + row_w;
             var y = h-h*item[1]*per;
-            cxt_2.fillText(item[1] * 100 + '%', x - 10, y - 10);
+            cxt_2.font="italic small-caps bold 24px arial";
+            cxt_2.fillText(item[1] * 100 + '%', x - 20, y - 30);
         }
         //绘制阴影
         cxt_2.stroke();

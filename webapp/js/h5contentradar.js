@@ -22,7 +22,7 @@ function h5contentradar(name,cfg){
             cxt_1.lineTo(x,y);
         }
         cxt_1.closePath();
-        cxt_1.fillStyle=istrue?'#99c0ff':'#f1f9ff';
+        cxt_1.fillStyle=istrue?'#606060':'#fff';
         istrue=!istrue;
         cxt_1.fill();
     }
@@ -56,7 +56,7 @@ function h5contentradar(name,cfg){
         text.css('transition-delay',i*0.2+'s');
     }
     cxt_1.lineWidth=3;
-    cxt_1.strokeStyle='#99c0ff';
+    cxt_1.strokeStyle='#606060';
     cxt_1.stroke();
 
 //绘制数据层
@@ -83,14 +83,14 @@ function h5contentradar(name,cfg){
             cxt_2,moveTo(r,r);
             cxt_2.lineTo(x,y);
         }
-        cxt_2.strokeStyle='red';
+        cxt_2.strokeStyle='rgba(255,96,0,1)';
         cns_2.lineWidth=10;
         cxt_2.fillStyle = 'rgba(255,96,0,0.1)';
         cxt_2.fill();
         cxt_2.closePath();
         cxt_2.stroke();
 //绘制点
-        cxt_2.fillStyle='red';
+        cxt_2.fillStyle='rgba(255,96,0,1)';
         for(var i=0; i<cfg.data.length;i++){
             cxt_2.beginPath();
             var step=cfg.data[i][1];

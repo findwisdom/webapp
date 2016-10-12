@@ -1,8 +1,9 @@
 /* 基本图文组件样式 */
 .h5_contentbase{
     position: absolute;
-    background-size:100%;
+    background-size:cover;
     background-repeat:no-repeat ;
+    transition:all 1s;
     opacity: 0;
 }
 

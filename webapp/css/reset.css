@@ -25,3 +25,67 @@ button {
 /* 布局(grids)(.g-) */ 
 /* 页面 */
 
+/* 首页 */
+.h5_ppt .h5_contentbasename_icon_bottom{
+    animation:mymove 2s infinite;
+    -webkit-animation:mymove 2s infinite;
+
+}
+@keyframes mymove{
+    0% { transform:scale(0.8)}
+    50%{ transform:scale(1.2)}
+    100% {transform:scale(0.8)}
+}
+@-webkit-keyframes mymove {
+    0% { transform:scale(0.8)}
+    50%{ transform:scale(1.1)}
+    100% {transform:scale(0.8)}
+}
+.h5_ppt .h5_contentbasename_first_share{
+    animation:mymove 2s infinite;
+    -webkit-animation:rock 2s infinite 2s;
+}
+@-webkit-keyframes rock{
+    0%{ transform:rotate(0deg)}
+    5%{ transform:rotate(3deg)}
+    10%{ transform:rotate(-4deg)}
+    15%{ transform:rotate(3deg)}
+    20%{ transform:rotate(-2deg)}
+    25%{ transform:rotate(1deg)}
+    30%{ transform:rotate(-1deg)}
+    70%{ transform:rotate(0deg)}
+    100%{ transform:rotate(0deg)}
+}
+@-webkit-keyframes rock{
+    0%{ transform:rotate(0deg)}
+    5%{ transform:rotate(3deg)}
+    10%{ transform:rotate(-4deg)}
+    15%{ transform:rotate(3deg)}
+    20%{ transform:rotate(-2deg)}
+    25%{ transform:rotate(1deg)}
+    30%{ transform:rotate(-1deg)}
+    70%{ transform:rotate(0deg)}
+    100%{ transform:rotate(0deg)}
+}
+/*about me*/
+.h5_contentbasename_page1_content{
+    font-family:"Andalus";
+    color: #fff;
+    letter-spacing: 1px;
+}
+/*exprience*/
+.h5_contentbasename_polyline .text{
+    color: #fff;
+}
+/*skill*/
+.h5_contentbasename_radar .text{
+    color: #fff;
+    font-size: 16px;
+}
+/*property*/
+.h5_contentbasename_bar_v .line_bar_v{
+    color: #fff;
+}
+
+
+
