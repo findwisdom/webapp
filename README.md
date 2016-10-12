@@ -51,42 +51,42 @@
 
 *具体方法
 
-$(function){
-    var ppt =new h5();
-    ppt
-        .addpage('text')
-            .addcontent('name',{ //添加模块的class类名
-                type:'base', //添加模块的类型
-                width:400,   //添加模块的宽度
-                height:400,  //添加模块的高度
-                bg:'imgs/wlecome.png', //添加模块的背景图片
-                css:{        //模块本身CSS样式
-                    opacity:0,
-                    top:'10%',
-                    backgroundSize:'contain',
-                    backgroundPosition:'center',
-                    'transform':'rotate(0)',
-                    '-webkit-transform':'rotate(0)'
+    $(function){
+        var ppt =new h5();
+        ppt
+            .addpage('text')
+                .addcontent('name',{ //添加模块的class类名
+                    type:'base', //添加模块的类型
+                    width:400,   //添加模块的宽度
+                    height:400,  //添加模块的高度
+                    bg:'imgs/wlecome.png', //添加模块的背景图片
+                    css:{        //模块本身CSS样式
+                        opacity:0,
+                        top:'10%',
+                        backgroundSize:'contain',
+                        backgroundPosition:'center',
+                        'transform':'rotate(0)',
+                        '-webkit-transform':'rotate(0)'
+                        },
+                    cssIn:{      //页面进入样式
+                         opacity:1,
+                         'transform':'rotate(360deg)',
+                         '-webkit-transform':'rotate(360deg)'
+                     },
+                    cssOut:{    //页面离开样式
+                         opacity:0,
+                         'transform':'rotate(0)',
+                         '-webkit-transform':'rotate(0)'
                     },
-                cssIn:{      //页面进入样式
-                     opacity:1,
-                     'transform':'rotate(360deg)',
-                     '-webkit-transform':'rotate(360deg)'
-                 },
-                cssOut:{    //页面离开样式
-                     opacity:0,
-                     'transform':'rotate(0)',
-                     '-webkit-transform':'rotate(0)'
-                },
-                center:true   //是否设置居中
-                onclick:function(){  //设置模块触发点击事件后执行函数
-                    $.fn.fullpage.moveTo( 1 )
-                }
-            })
-        .addpage()
-            .addaddcontent()
-        .loader()
- }
+                    center:true   //是否设置居中
+                    onclick:function(){  //设置模块触发点击事件后执行函数
+                        $.fn.fullpage.moveTo( 1 )
+                    }
+                })
+            .addpage()
+                .addaddcontent()
+            .loader()
+     }
 
 目前暂时提供了这些接口，若想要跟多接口可在`h5contentbase`中继续开发添加
 ---
