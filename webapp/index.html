@@ -9,24 +9,6 @@
         <meta content="telephone=no" name="format-detection">
         <title>webapp组件</title>
         <!-- 载入所有的组件资源 -->
-        <script type="text/javascript" src="js/lib/jquery.js"></script>
-        <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
-        <script type="text/javascript" src="js/H5.js"></script>
-        <script type="text/javascript" src="js/H5_loading.js"></script>
-        <script type="text/javascript">var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");var browser = navigator.userAgent.toLowerCase();var isMobile = false;for (var i=0; i<mobileAgent.length; i++){ if (browser.indexOf(mobileAgent[i])!=-1){ isMobile = true;location.href ='https://findwisdom.github.io/webapp/webapp/index_m.html';break; } }</script>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/H5.css">
-        <link rel="stylesheet" href="css/H5_loading.css">
-        <script>
-            var res=['base','bar','bar_v','point','polyline','radar','ring','pie'];
-            var html=[];
-            for(var s in res){
-                html.push('<script type="text/javascript" src="js/h5content'+res[s]+'.js"><\/script>');
-                html.push('<link rel="stylesheet" href="css/h5content'+res[s]+'.css">');
-            }
-            document.write(html.join(''));
-        </script>
         <style>
             iframe{
                 background: #515151;
@@ -38,7 +20,7 @@
             }
             .text{
                 text-align: center;
-                font-size: 30px;
+                font-size: 20px;
                 margin-top: 40px;
             }
         </style>
