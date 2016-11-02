@@ -4,7 +4,7 @@
 
 目前已经封装好复用率较高的八种常用的模块及图表，分别有有普通模块`base`,垂直柱图`bar_v`,水平柱图`bar`，饼图`pie`，点图`point`，折线图`polyline`,环图`ring`,雷达图`radar`.
 
-### [Demo]( http://find_wisdom.coding.me/webapp)
+### [Demo](https://findwisdom.github.io/webapp/webapp/index.html)
 
 ![home](http://oe9d5k8dj.bkt.clouddn.com/home.png)
 
